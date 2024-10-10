@@ -1,0 +1,20 @@
+.logo {
+  transition: color 0.3s ease-in-out, outline-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .logo {
+    max-width: 100px;
+  }
+}
+.logo:focus {
+  outline-color: black;
+  border-color: white;
+}
+.logo:hover {
+  color: var(--pink);
+}
+.logo:active {
+  color: var(--text);
+}
+
+/*# sourceMappingURL=Logo.module.css.map */

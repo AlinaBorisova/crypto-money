@@ -1,0 +1,204 @@
+@font-face {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(""),
+    url(/fonts/comfortaa-v40-cyrillic-700.bc1657ffe7d1c15ef896.woff2)
+    format("woff2"),
+    url(/fonts/comfortaa-v40-cyrillic-700.8b9ee79ac461735db231.woff)
+    format("woff");
+}
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local(""),
+    url(/fonts/nunito-v24-cyrillic-regular.ac1741731b39bc1f5abf.woff2)
+    format("woff2"),
+    url(/fonts/nunito-v24-cyrillic-regular.3b59f67332cde536e48c.woff)
+    format("woff");
+}
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local(""),
+    url(/fonts/nunito-v24-cyrillic-600.ea9bb316e858c376c2ab.woff2)
+    format("woff2"),
+    url(/fonts/nunito-v24-cyrillic-600.259682ca852c1e33be44.woff) format("woff");
+}
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local(""),
+    url(/fonts/nunito-v24-cyrillic-700.17457b80884d06340e5d.woff2)
+    format("woff2"),
+    url(/fonts/nunito-v24-cyrillic-700.28f98bfe91c387ab77d0.woff) format("woff");
+}
+:root {
+  --header: #392350;
+  --bgcolor: #210b36;
+  --text: #c6b6d7;
+  --pink: #9c19ca;
+  --blue: #4b00ca;
+  --white: #ffffff;
+}
+html {
+  box-sizing: border-box;
+  position: relative;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+body {
+  margin: initial;
+  min-height: 100vh;
+  min-width: 320px;
+  padding-bottom: 100px;
+  background-color: #210b36;
+  background-color: var(--bgcolor);
+  color: #fff;
+  font-family:
+          Merriweather Sans,
+          sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.3;
+
+  @media (min-width: 540px) {
+    padding-bottom: 140px;
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 180px;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+fieldset,
+figure,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+iframe {
+  border: none;
+}
+.visually-hidden {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    87.4deg,
+    #2e00b1 -11.74%,
+    #8100bd 48.81%,
+    #a400be 113.27%
+  );
+  border: none;
+  border-radius: 10px;
+  z-index: 2;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.button:disabled {
+  pointer-events: none;
+  background: gray;
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:focus::after {
+  opacity: 1;
+}
+
+.button:active::before,
+.button:active::after {
+  opacity: 0;
+}
+
+.button:active {
+  background: #2e00b1;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.button::before {
+  background: linear-gradient(
+    88.2deg,
+    #a400be -14.85%,
+    #8100bd 50.2%,
+    #2e00b1 115.25%,
+    #2e00b1 115.25%
+  );
+}
+
+.button::after {
+  background: linear-gradient(
+    88.2deg,
+    #2e00b1 -14.85%,
+    #a400be 50.2%,
+    #2e00b1 115.25%,
+    #2e00b1 115.25%
+  );
+}
+
+.active {
+  color: #c6b6d7;
+  color: var(--text);
+}
